@@ -1,0 +1,2 @@
+C:\Users\oscar\RiderProjects\Proyecto3_DIA\InformesProduccion\InformesProduccion\obj\Debug\InformesProduccion.csprojAssemblyReference.cache
+C:\Users\oscar\RiderProjects\Proyecto3_DIA\InformesProduccion\InformesProduccion\obj\Debug\InformesProduccion.csproj.CoreCompileInputs.cache
