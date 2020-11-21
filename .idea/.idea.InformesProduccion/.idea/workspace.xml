@@ -23,11 +23,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6e23b7b5-aa25-433a-9e48-ffb7c221c13e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/InformesProduccion/Ui/MainWindowCtrl.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/InformesProduccion/Ui/MainWindowView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.InformesProduccion/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.InformesProduccion/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.InformesProduccion/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.InformesProduccion/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/InformesProduccion/InformesProduccion.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/InformesProduccion/InformesProduccion.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InformesProduccion/Program.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InformesProduccion/Ui/MainWindowView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/InformesProduccion/Ui/MainWindowView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/InformesProduccion/Ui/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/InformesProduccion/Ui/Program.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/InformesProduccion/obj/Debug/InformesProduccion.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/InformesProduccion/obj/Debug/InformesProduccion.csprojAssemblyReference.cache" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -35,27 +35,43 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="XML File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/InformesProduccion/Program.cs" />
         <option value="$PROJECT_DIR$/InformesProduccion/Ui/MainWindowCtrl.cs" />
-        <option value="$PROJECT_DIR$/InformesProduccion/Ui/MainWindowView.cs" />
+        <option value="$PROJECT_DIR$/InformesProduccion/Program.cs" />
         <option value="$PROJECT_DIR$/InformesProduccion/Ui/Program.cs" />
+        <option value="$PROJECT_DIR$/InformesProduccion/Samples/meritos.xml" />
+        <option value="$PROJECT_DIR$/InformesProduccion/Core/Merito.cs" />
+        <option value="$PROJECT_DIR$/InformesProduccion/Core/RegistroMeritos.cs" />
+        <option value="$PROJECT_DIR$/InformesProduccion/Ui/MainWindowCore.cs" />
+        <option value="$PROJECT_DIR$/InformesProduccion/Ui/MainWindowView.cs" />
       </list>
     </option>
   </component>
   <component name="ProjectId" id="1kYQQxYJnHairAN01kzUUN8opSp" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager">
@@ -87,7 +103,8 @@
       <option name="presentableId" value="Default" />
       <updated>1605875046384</updated>
       <workItem from="1605875057586" duration="112000" />
-      <workItem from="1605875261836" duration="1793000" />
+      <workItem from="1605875261836" duration="2311000" />
+      <workItem from="1605975872799" duration="5206000" />
     </task>
     <servers />
   </component>
@@ -106,8 +123,19 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="782" y="194" key="RiderGenerateDialog" timestamp="1605979452285">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="782" y="194" key="RiderGenerateDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1605979452285" />
+    <state x="616" y="240" key="run.anything.popup" timestamp="1605976878441">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1605976878441" />
   </component>
 </project>
