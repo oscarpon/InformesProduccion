@@ -6,7 +6,7 @@
     {
         public static void Main(string[] args)
         {
-            var f = new MainWindow();
+            var f = new MainWindowCtrl().View;
             
             WForms.Application.Run(f);
         }

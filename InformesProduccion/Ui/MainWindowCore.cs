@@ -15,10 +15,6 @@ namespace InformesProduccion.Ui
         public const int ColPagina = 4;
         public const int ColAutor = 5;
 
-        public void MainWindow()
-        {
-            this.Build();
-            
-        }
+        
     }
 }

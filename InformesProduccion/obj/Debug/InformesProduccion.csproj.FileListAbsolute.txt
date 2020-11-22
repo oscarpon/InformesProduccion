@@ -1,2 +1,8 @@
 C:\Users\oscar\RiderProjects\Proyecto3_DIA\InformesProduccion\InformesProduccion\obj\Debug\InformesProduccion.csprojAssemblyReference.cache
 C:\Users\oscar\RiderProjects\Proyecto3_DIA\InformesProduccion\InformesProduccion\obj\Debug\InformesProduccion.csproj.CoreCompileInputs.cache
+C:\Users\oscar\RiderProjects\Proyecto3_DIA\InformesProduccion\InformesProduccion\bin\Debug\InformesProduccion.exe
+C:\Users\oscar\RiderProjects\Proyecto3_DIA\InformesProduccion\InformesProduccion\bin\Debug\InformesProduccion.pdb
+C:\Users\oscar\RiderProjects\Proyecto3_DIA\InformesProduccion\InformesProduccion\obj\Debug\InformesProduccion.exe
+C:\Users\oscar\RiderProjects\Proyecto3_DIA\InformesProduccion\InformesProduccion\obj\Debug\InformesProduccion.pdb
+C:\Users\oscar\RiderProjects\Proyecto3_DIA\InformesProduccion\InformesProduccion\obj\Debug\InformesProduccion.csproj.GenerateResource.cache
+C:\Users\oscar\RiderProjects\Proyecto3_DIA\InformesProduccion\InformesProduccion\obj\Debug\InformesProduccion.Ui.GraficoView.resources

@@ -8,16 +8,19 @@
         <e p="bin" t="ExcludeRecursive" />
         <e p="Core" t="Include">
           <e p="Merito.cs" t="Include" />
+          <e p="RegistroMeritos.cs" t="Include" />
         </e>
         <e p="InformesProduccion.csproj" t="IncludeRecursive" />
+        <e p="meritos.xml" t="Include" />
         <e p="obj" t="ExcludeRecursive" />
         <e p="Properties" t="Include">
           <e p="AssemblyInfo.cs" t="Include" />
         </e>
-        <e p="Samples" t="Include">
-          <e p="meritos.xml" t="Include" />
-        </e>
+        <e p="Samples" t="Include" />
         <e p="Ui" t="Include">
+          <e p="GraficoView.cs" t="Include" />
+          <e p="GraficoView.Designer.cs" t="Include" />
+          <e p="GraficoView.resx" t="Include" />
           <e p="MainWindowCore.cs" t="Include" />
           <e p="MainWindowCtrl.cs" t="Include" />
           <e p="MainWindowView.cs" t="Include" />
