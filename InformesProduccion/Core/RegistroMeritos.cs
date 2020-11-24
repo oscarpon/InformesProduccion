@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using System.Text.RegularExpressions;
 
 namespace InformesProduccion.Core
@@ -130,6 +131,23 @@ namespace InformesProduccion.Core
         {
             return RecuperaXml(ArchivoXml);
         }
+
+        /*public static IEnumerable<Merito> RecuperaXml(string nf)
+        {
+            var docXml = XElement.Load(nf);
+
+            IEnumerable<Merito> toret =
+                from meritoXml in docXml.Elements("merito")
+                select new Merito(
+                    (int) meritoXml.Element(EtqDoi),
+                    (int) meritoXml.Element(EtqIssn),
+                    (int) meritoXml.Element(EtqAno),
+                    (string) meritoXml.Element(EtqPagina),
+                    (string) meritoXml.Element(EtqAutor)
+                );
+            return toret;
+
+        }*/
         
        
     }

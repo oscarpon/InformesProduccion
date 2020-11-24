@@ -1,11 +1,12 @@
-﻿using System.Windows.Forms.Design;
+﻿using System.Runtime.Remoting.Channels;
+using System.Windows.Forms.Design;
 
 namespace InformesProduccion.Ui
 {
     using WForms =  System.Windows.Forms;
     using Draw =  System.Drawing;
 
-    public class MainWindowView: WForms.Form
+    public partial class MainWindowView: WForms.Form
     {
         public MainWindowView()
         {
@@ -14,6 +15,13 @@ namespace InformesProduccion.Ui
 
         void Build()
         {
+            
+            this.BuildBtnTodos();
+            this.BuildInfAnual();
+            this.BuildInfMensual();
+            this.BuildPanelLista();
+            this.BuildBtInfAnual();
+            this.BuildBtInfMensual();
             var pnlMain = new WForms.TableLayoutPanel()
             {
                 Dock = WForms.DockStyle.Fill
@@ -29,7 +37,7 @@ namespace InformesProduccion.Ui
             
             this.Controls.Add(pnlMain);
             this.Text = "Informes científicos";
-            this.MinimumSize = new Draw.Size(500,500);
+            this.MinimumSize = new Draw.Size(500, 500);
 
         }
 
@@ -57,7 +65,7 @@ namespace InformesProduccion.Ui
                 Dock = WForms.DockStyle.Top,
                 Text = "Informe Anual"
             };
-            
+
             return BtInfAnual;
         }
 
@@ -131,18 +139,7 @@ namespace InformesProduccion.Ui
             var textCellTemplate2 = new WForms.DataGridViewTextBoxCell();
             var textCellTemplate3 = new WForms.DataGridViewTextBoxCell();
             var textCellTemplate4 = new WForms.DataGridViewTextBoxCell();
-            textCellTemplate0.Style.BackColor = Draw.Color.LightGray;
-            textCellTemplate0.Style.ForeColor = Draw.Color.Black;
-            textCellTemplate1.Style.BackColor = Draw.Color.Wheat;
-            textCellTemplate1.Style.ForeColor = Draw.Color.Black;
-            textCellTemplate1.Style.Alignment = WForms.DataGridViewContentAlignment.MiddleRight;
-            textCellTemplate2.Style.BackColor = Draw.Color.Wheat;
-            textCellTemplate2.Style.ForeColor = Draw.Color.Black;
-            textCellTemplate3.Style.BackColor = Draw.Color.Wheat;
-            textCellTemplate3.Style.ForeColor = Draw.Color.Black;
-            textCellTemplate4.Style.BackColor = Draw.Color.Wheat;
-            textCellTemplate4.Style.ForeColor = Draw.Color.Black;
-            
+
             var column0 = new WForms.DataGridViewTextBoxColumn {
                 SortMode = WForms.DataGridViewColumnSortMode.NotSortable,
                 CellTemplate = textCellTemplate0,
@@ -183,7 +180,7 @@ namespace InformesProduccion.Ui
                 ReadOnly = true
             };
             
-            this.PanelLista.Columns.AddRange( new WForms.DataGridViewColumn[] {
+            PanelLista.Columns.AddRange( new WForms.DataGridViewColumn[] {
                 column0, column1, column2, column3, column4
             } );
             

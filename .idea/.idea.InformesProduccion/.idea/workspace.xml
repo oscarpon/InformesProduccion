@@ -23,19 +23,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6e23b7b5-aa25-433a-9e48-ffb7c221c13e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/InformesProduccion/meritos.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.InformesProduccion/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.InformesProduccion/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.InformesProduccion/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.InformesProduccion/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InformesProduccion/Core/Merito.cs" beforeDir="false" afterPath="$PROJECT_DIR$/InformesProduccion/Core/Merito.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/InformesProduccion/Core/RegistroMeritos.cs" beforeDir="false" afterPath="$PROJECT_DIR$/InformesProduccion/Core/RegistroMeritos.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/InformesProduccion/InformesProduccion.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/InformesProduccion/InformesProduccion.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InformesProduccion/Samples/meritos.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/InformesProduccion/Ui/MainWindowCore.cs" beforeDir="false" afterPath="$PROJECT_DIR$/InformesProduccion/Ui/MainWindowCore.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/InformesProduccion/Ui/MainWindowCore.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/InformesProduccion/Ui/MainWindowCtrl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/InformesProduccion/Ui/MainWindowCtrl.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/InformesProduccion/Ui/MainWindowView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/InformesProduccion/Ui/MainWindowView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InformesProduccion/Ui/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/InformesProduccion/Ui/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/InformesProduccion/bin/Debug/InformesProduccion.exe" beforeDir="false" afterPath="$PROJECT_DIR$/InformesProduccion/bin/Debug/InformesProduccion.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/InformesProduccion/bin/Debug/InformesProduccion.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/InformesProduccion/bin/Debug/InformesProduccion.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/InformesProduccion/obj/Debug/InformesProduccion.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/InformesProduccion/obj/Debug/InformesProduccion.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/InformesProduccion/obj/Debug/InformesProduccion.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/InformesProduccion/obj/Debug/InformesProduccion.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/InformesProduccion/obj/Debug/InformesProduccion.csproj.GenerateResource.cache" beforeDir="false" afterPath="$PROJECT_DIR$/InformesProduccion/obj/Debug/InformesProduccion.csproj.GenerateResource.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/InformesProduccion/obj/Debug/InformesProduccion.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/InformesProduccion/obj/Debug/InformesProduccion.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/InformesProduccion/obj/Debug/InformesProduccion.exe" beforeDir="false" afterPath="$PROJECT_DIR$/InformesProduccion/obj/Debug/InformesProduccion.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/InformesProduccion/obj/Debug/InformesProduccion.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/InformesProduccion/obj/Debug/InformesProduccion.pdb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,13 +62,14 @@
         <option value="$PROJECT_DIR$/InformesProduccion/Samples/meritos.xml" />
         <option value="$PROJECT_DIR$/InformesProduccion/Core/Merito.cs" />
         <option value="$PROJECT_DIR$/InformesProduccion/Ui/Program.cs" />
-        <option value="$PROJECT_DIR$/InformesProduccion/Ui/MainWindowView.cs" />
-        <option value="$PROJECT_DIR$/InformesProduccion/Core/RegistroMeritos.cs" />
         <option value="$PROJECT_DIR$/InformesProduccion/Ui/Grafico.cs" />
         <option value="$PROJECT_DIR$/InformesProduccion/Ui/Grafico.Designer.cs" />
-        <option value="$PROJECT_DIR$/InformesProduccion/Ui/MainWindowCtrl.cs" />
         <option value="$PROJECT_DIR$/InformesProduccion/Ui/GraficoView.Designer.cs" />
         <option value="$PROJECT_DIR$/InformesProduccion/Ui/GraficoView.cs" />
+        <option value="$PROJECT_DIR$/InformesProduccion/Ui/MainWindowView.cs" />
+        <option value="$PROJECT_DIR$/InformesProduccion/Ui/InformeDepartamento.cs" />
+        <option value="$PROJECT_DIR$/InformesProduccion/Core/RegistroMeritos.cs" />
+        <option value="$PROJECT_DIR$/InformesProduccion/Ui/MainWindowCtrl.cs" />
       </list>
     </option>
   </component>
@@ -83,6 +86,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.C#" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager">
@@ -119,6 +123,12 @@
       <workItem from="1606062301900" duration="11404000" />
       <workItem from="1606075082923" duration="1580000" />
       <workItem from="1606077861261" duration="2094000" />
+      <workItem from="1606129063566" duration="610000" />
+      <workItem from="1606133480793" duration="2557000" />
+      <workItem from="1606145541781" duration="2790000" />
+      <workItem from="1606149196726" duration="627000" />
+      <workItem from="1606161659553" duration="2783000" />
+      <workItem from="1606207398593" duration="988000" />
     </task>
     <servers />
   </component>
@@ -143,22 +153,26 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1606079954589">
+    <state x="640" y="256" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1606148664397">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1606079954589" />
-    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1606079954589">
+    <state x="640" y="256" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1606148664397" />
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1606208387502">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1606079954589" />
-    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1606079954589">
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1606208387502" />
+    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1606208387501">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1606079954589" />
-    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1606079954589">
+    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1606208387501" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1606208387501">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1606079954589" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1606208387501" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1606208387502">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1606208387502" />
     <state x="552" y="252" key="Rider.ProjectTemplateDialog.Size" timestamp="1606074664451">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -167,6 +181,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="782" y="194" key="RiderGenerateDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1606069343567" />
+    <state x="461" y="165" key="SettingsEditor" timestamp="1606149220241">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="461" y="165" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1606149220241" />
     <state x="590" y="179" key="ToolboxManager" timestamp="1606078037558">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
