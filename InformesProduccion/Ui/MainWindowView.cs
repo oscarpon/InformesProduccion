@@ -16,13 +16,6 @@ namespace InformesProduccion.Ui
         void Build()
         {
             
-            
-            this.BuildInfAnual();
-            this.BuildInfMensual();
-            this.BuildPanelLista();
-            this.BuildBtInfAnual();
-            this.BuildBtInfMensual();
-            this.BuildBtnTodos();
             var pnlMain = new WForms.TableLayoutPanel()
             {
                 Dock = WForms.DockStyle.Fill

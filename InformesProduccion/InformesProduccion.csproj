@@ -59,9 +59,6 @@
     <Compile Include="Ui\Program.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Samples\" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="meritos.xml" />
   </ItemGroup>
   <ItemGroup>

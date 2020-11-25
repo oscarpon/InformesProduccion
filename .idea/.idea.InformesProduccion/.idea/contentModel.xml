@@ -16,7 +16,6 @@
         <e p="Properties" t="Include">
           <e p="AssemblyInfo.cs" t="Include" />
         </e>
-        <e p="Samples" t="Include" />
         <e p="Ui" t="Include">
           <e p="GraficoView.cs" t="Include" />
           <e p="GraficoView.Designer.cs" t="Include" />

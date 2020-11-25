@@ -15,14 +15,14 @@ namespace InformesProduccion.Ui
         public GraficoView()
         {
             InitializeComponent();
-            //Load += chart1_Load;
+            Load += chart1_Load;
             
         }
         
         private void chart1_Load(Object sender, EventArgs e)
         {
             DataSet ds = new DataSet();
-            ds.ReadXml("../meritos.xml");
+            ds.ReadXml("meritos.xml");
             chart1.Series["Series1"].XValueMember = "AUTOR";
             chart1.Series["Series1"].YValueMembers = "ANO";
             chart1.DataSource = ds;

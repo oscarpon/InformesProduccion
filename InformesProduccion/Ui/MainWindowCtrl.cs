@@ -22,6 +22,7 @@ namespace InformesProduccion.Ui
             this.View.InfMensual.SelectedIndexChanged += (sender, args) => this.InformeMensual(); 
             //this.View.BtInfMensual.Click += (sender, args) => this.InformeMensual();
             //this.View.BtnInfTodos.Click += (sender, args) => this.MostrarTodos();
+            Console.WriteLine(this.View.BtnInfTodos);
 
         }
         
@@ -32,9 +33,9 @@ namespace InformesProduccion.Ui
 
         public void MostrarTodos()
         {
-            int numMeritos = this.meritos.Count;
+            var numMeritos = this.meritos.Count;
 
-            for (int i = 0; i < numMeritos; i++)
+            for (var i = 0; i < numMeritos; i++)
             {
                 this.View.PanelLista.Rows.Add();
             }
