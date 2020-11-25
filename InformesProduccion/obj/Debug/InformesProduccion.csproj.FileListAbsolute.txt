@@ -6,4 +6,3 @@ C:\Users\oscar\RiderProjects\Proyecto3_DIA\InformesProduccion\InformesProduccion
 C:\Users\oscar\RiderProjects\Proyecto3_DIA\InformesProduccion\InformesProduccion\obj\Debug\InformesProduccion.pdb
 C:\Users\oscar\RiderProjects\Proyecto3_DIA\InformesProduccion\InformesProduccion\obj\Debug\InformesProduccion.csproj.GenerateResource.cache
 C:\Users\oscar\RiderProjects\Proyecto3_DIA\InformesProduccion\InformesProduccion\obj\Debug\InformesProduccion.Ui.GraficoView.resources
-C:\Users\oscar\RiderProjects\Proyecto3_DIA\InformesProduccion\InformesProduccion\obj\Debug\InformesProduccion.Ui.InformeDepartamento.resources

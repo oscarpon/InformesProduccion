@@ -1,8 +1,12 @@
 ﻿using System;
 using System.Collections;
+using System.Collections.Generic;
 using System.Data;
+using System.Linq;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
+using System.Xml.Linq;
+using InformesProduccion.Core;
 
 namespace InformesProduccion.Ui
 {
@@ -10,8 +14,9 @@ namespace InformesProduccion.Ui
     {
         public GraficoView()
         {
-            //InitializeComponent();
-            Load += chart1_Load;
+            InitializeComponent();
+            //Load += chart1_Load;
+            
         }
         
         private void chart1_Load(Object sender, EventArgs e)
@@ -29,5 +34,9 @@ namespace InformesProduccion.Ui
             this.chart1.Legends[0].Alignment = System.Drawing.StringAlignment.Center;  
             this.chart1.Series[0].LegendText = "#VALX (#PERCENT)";
         }
+        
+        
+        
+        
     }
 }

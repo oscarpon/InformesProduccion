@@ -52,12 +52,6 @@
     <Compile Include="Ui\GraficoView.Designer.cs">
       <DependentUpon>GraficoView.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ui\InformeDepartamento.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Ui\InformeDepartamento.Designer.cs">
-      <DependentUpon>InformeDepartamento.cs</DependentUpon>
-    </Compile>
     <Compile Include="Ui\MainWindowCtrl.cs" />
     <Compile Include="Ui\MainWindowView.cs">
       <SubType>Form</SubType>
@@ -73,9 +67,6 @@
   <ItemGroup>
     <EmbeddedResource Include="Ui\GraficoView.resx">
       <DependentUpon>GraficoView.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Ui\InformeDepartamento.resx">
-      <DependentUpon>InformeDepartamento.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

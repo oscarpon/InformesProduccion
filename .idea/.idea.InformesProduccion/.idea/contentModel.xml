@@ -21,9 +21,6 @@
           <e p="GraficoView.cs" t="Include" />
           <e p="GraficoView.Designer.cs" t="Include" />
           <e p="GraficoView.resx" t="Include" />
-          <e p="InformeDepartamento.cs" t="Include" />
-          <e p="InformeDepartamento.Designer.cs" t="Include" />
-          <e p="InformeDepartamento.resx" t="Include" />
           <e p="MainWindowCtrl.cs" t="Include" />
           <e p="MainWindowView.cs" t="Include" />
           <e p="Program.cs" t="Include" />

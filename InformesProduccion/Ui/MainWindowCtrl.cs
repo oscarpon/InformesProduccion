@@ -19,9 +19,9 @@ namespace InformesProduccion.Ui
             this.meritos = RegistroMeritos.RecuperaXml();
             this.View.InfAnual.TextChanged += (sender, args) => this.InformeAnual();
             this.View.BtInfAnual.Click += (sender, args) => this.InformeAnual();
-            this.View.InfMensual.TextChanged += (sender, args) => this.InformeMensual();
-            View.BtInfMensual.DoubleClick += (sender, args) => this.InformeMensual();
-           // this.View.BtnInfTodos.Click += (sender, args) => this.MostrarTodos(1);
+            this.View.InfMensual.SelectedIndexChanged += (sender, args) => this.InformeMensual(); 
+            //this.View.BtInfMensual.Click += (sender, args) => this.InformeMensual();
+            //this.View.BtnInfTodos.Click += (sender, args) => this.MostrarTodos();
 
         }
         
@@ -30,7 +30,7 @@ namespace InformesProduccion.Ui
             get;
         }
 
-        public void MostrarTodos(int index)
+        public void MostrarTodos()
         {
             int numMeritos = this.meritos.Count;
 
@@ -39,7 +39,7 @@ namespace InformesProduccion.Ui
                 this.View.PanelLista.Rows.Add();
             }
 
-            WForms.DataGridViewRow row = this.View.PanelLista.Rows[index];
+            WForms.DataGridViewRow row = this.View.PanelLista.Rows[1];
 
             row.Cells[0].Value = merito.Doi;
             row.Cells[1].Value = merito.Issn;
@@ -51,12 +51,12 @@ namespace InformesProduccion.Ui
 
         public void InformeMensual()
         {
-            
+            var grafMes = new GraficoView();
         }
 
         public void InformeAnual()
         {
-            
+            var grafAn = new GraficoView();
         }
 
         private RegistroMeritos meritos;

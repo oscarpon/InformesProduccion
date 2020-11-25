@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text.RegularExpressions;
 
 namespace InformesProduccion.Core
@@ -127,28 +128,40 @@ namespace InformesProduccion.Core
             return toret;
         }
 
-        public static RegistroMeritos RecuperaXml()
+        public static IEnumerable<Merito> RecuperarAño(string nf, string año)
         {
-            return RecuperaXml(ArchivoXml);
-        }
-
-        /*public static IEnumerable<Merito> RecuperaXml(string nf)
-        {
-            var docXml = XElement.Load(nf);
+            var docXml = XElement.Load( nf );
 
             IEnumerable<Merito> toret =
                 from meritoXml in docXml.Elements("merito")
+                where EtqAno == año
                 select new Merito(
                     (int) meritoXml.Element(EtqDoi),
                     (int) meritoXml.Element(EtqIssn),
                     (int) meritoXml.Element(EtqAno),
                     (string) meritoXml.Element(EtqPagina),
                     (string) meritoXml.Element(EtqAutor)
-                );
+                    );
+                
+            
             return toret;
+        }
 
-        }*/
+        public static RegistroMeritos RecuperaXml()
+        {
+            return RecuperaXml(ArchivoXml);
+        }
         
-       
+        public override string ToString()
+        {
+            var toret = new StringBuilder();
+
+            foreach(Merito m in this.meritos) {
+                toret.AppendLine( m.ToString() );
+            }
+
+            return toret.ToString();
+        }
+        
     }
 }

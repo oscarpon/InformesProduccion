@@ -16,12 +16,13 @@ namespace InformesProduccion.Ui
         void Build()
         {
             
-            this.BuildBtnTodos();
+            
             this.BuildInfAnual();
             this.BuildInfMensual();
             this.BuildPanelLista();
             this.BuildBtInfAnual();
             this.BuildBtInfMensual();
+            this.BuildBtnTodos();
             var pnlMain = new WForms.TableLayoutPanel()
             {
                 Dock = WForms.DockStyle.Fill
@@ -118,16 +119,16 @@ namespace InformesProduccion.Ui
             pnlLista.SuspendLayout();
             pnlLista.Dock = WForms.DockStyle.Fill;
 
-            // Crear gridview
+           
             this.PanelLista = new WForms.DataGridView()
             {
-                Dock = WForms.DockStyle.Fill,
-                AllowUserToResizeRows = false,
+                Dock = WForms.DockStyle.Top,
+                /*AllowUserToResizeRows = false,
                 RowHeadersVisible = false,
                 AutoGenerateColumns = false,
                 MultiSelect = false,
                 AllowUserToAddRows = false,
-                EnableHeadersVisualStyles = false,
+                EnableHeadersVisualStyles = false,*/
                 SelectionMode = WForms.DataGridViewSelectionMode.FullRowSelect
             };
             
