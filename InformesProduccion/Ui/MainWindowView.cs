@@ -64,7 +64,7 @@ namespace InformesProduccion.Ui
         }
 
         WForms.Panel BuildInfMensual()
-        {
+        {            
             var toret = new WForms.Panel
             {
                 Dock = WForms.DockStyle.Top
@@ -87,23 +87,23 @@ namespace InformesProduccion.Ui
         }
         WForms.Button BuildBtInfMensual()
         {
-            this.BtInfAnual = new WForms.Button
+            this.BtInfMensual = new WForms.Button
             {
                 Dock = WForms.DockStyle.Top,
                 Text = "Informe Mensual"
             };
-            return BtInfAnual;
+            return this.BtInfMensual;
         }
         
         WForms.Button BuildBtnTodos()
         {
-            this.BtInfAnual = new WForms.Button
+            this.BtnInfTodos = new WForms.Button
             {
                 Dock = WForms.DockStyle.Top,
                 Text = "MostrarTodos"
             };
             
-            return BtInfAnual;
+            return BtnInfTodos;
         }
         
         WForms.Panel BuildPanelLista()

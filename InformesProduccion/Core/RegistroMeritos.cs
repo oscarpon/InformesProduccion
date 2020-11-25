@@ -30,6 +30,12 @@ namespace InformesProduccion.Core
         {
             this.meritos.AddRange(meritos);
         }
+        
+        public Merito this[int i] {
+            get {
+                return this.meritos[ i ];
+            }
+        }
 
         public void Add(Merito item)
         {
