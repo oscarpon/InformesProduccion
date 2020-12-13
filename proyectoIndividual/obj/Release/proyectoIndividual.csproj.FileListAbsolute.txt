@@ -1,0 +1,4 @@
+C:\Users\oscar\Desktop\proyectoIndividual\proyectoIndividual\obj\Release\proyectoIndividual.csprojAssemblyReference.cache
+C:\Users\oscar\Desktop\proyectoIndividual\proyectoIndividual\obj\Release\proyectoIndividual.Ui.Dlg.GraficaMensual.resources
+C:\Users\oscar\Desktop\proyectoIndividual\proyectoIndividual\obj\Release\proyectoIndividual.csproj.GenerateResource.cache
+C:\Users\oscar\Desktop\proyectoIndividual\proyectoIndividual\obj\Release\proyectoIndividual.csproj.CoreCompileInputs.cache

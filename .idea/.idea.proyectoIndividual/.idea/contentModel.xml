@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\oscar\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\oscar\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_proyectoIndividual.-1095303919.00" t="ExcludeRecursive" />
+    <e p="C:\Users\oscar\Desktop\proyectoIndividual" t="IncludeFlat">
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="proyectoIndividual" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Core" t="Include">
+          <e p="GestionMeritoCientifico.cs" t="Include" />
+          <e p="GestionMiembros.cs" t="Include" />
+          <e p="MeritoCientifico.cs" t="Include" />
+          <e p="Miembro.cs" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+        <e p="proyectoIndividual.csproj" t="IncludeRecursive" />
+        <e p="UI" t="Include">
+          <e p="Dlg" t="Include">
+            <e p="DlgConsultaMerito.cs" t="Include" />
+            <e p="DlgConsultaMiembro.cs" t="Include" />
+            <e p="DlgInformeTodos.cs" t="Include" />
+            <e p="DlgInsertaMerito.cs" t="Include" />
+            <e p="DlgInsertaMiembro.cs" t="Include" />
+            <e p="DlgModificaMerito.cs" t="Include" />
+            <e p="DlgModificaMiembro.cs" t="Include" />
+            <e p="GraficoAnual.cs" t="Include" />
+            <e p="GraficoAnual.Designer.cs" t="Include" />
+            <e p="GraficoAnual.resx" t="Include" />
+            <e p="GraficoMensual.cs" t="Include" />
+            <e p="GraficoMensual.Designer.cs" t="Include" />
+            <e p="GraficoMensual.resx" t="Include" />
+          </e>
+          <e p="MainWindowCore.cs" t="Include" />
+          <e p="MainWindowView.cs" t="Include" />
+          <e p="Program.cs" t="Include" />
+        </e>
+      </e>
+      <e p="proyectoIndividual.sln" t="IncludeFlat" />
+    </e>
+  </component>
+</project>
