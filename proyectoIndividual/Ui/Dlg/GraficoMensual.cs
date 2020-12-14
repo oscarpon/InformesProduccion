@@ -26,5 +26,6 @@ namespace proyectoIndividual.Ui.Dlg
                 serie.Points.Add(puntos[i]);
             }
         }
+        
     }
 }

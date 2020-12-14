@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Windows.Documents;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
 using proyectoIndividual.Core;
@@ -7,16 +10,18 @@ namespace proyectoIndividual.Ui.Dlg
 {
     public partial class GraficoAnual : Form
     {
-        public GraficoAnual()
+        public GraficoAnual(GestionMeritoCientifico meritos)
         {
+            this.Meritos = meritos;
             InitializeComponent();
         }
 
         private void GraficoAnual_Load(object sender, EventArgs e)
         {
-            
-            string[] series = {"Oscar", "Raul", "Ponte"};
-            int[] puntos = {23, 10, 70};
+
+
+            string[] series = this.Meritos.getListAutores().Distinct().ToArray();
+            int[] puntos = this.Meritos.getNumeroVeces();
 
             chart1.Palette = ChartColorPalette.Pastel;
             chart1.Titles.Add("Informe Anual");
@@ -29,6 +34,8 @@ namespace proyectoIndividual.Ui.Dlg
             }
         }
 
-        
+        private GestionMeritoCientifico Meritos;
+
+
     }
 }

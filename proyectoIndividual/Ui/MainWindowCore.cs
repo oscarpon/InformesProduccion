@@ -148,7 +148,7 @@ namespace proyectoIndividual
         void InformeAnual()
         {
             Console.WriteLine("Informe Anual");
-            var dlgInformeAnual = new GraficoAnual();
+            var dlgInformeAnual = new GraficoAnual(this.Meritos);
 
 
             this.View.Hide();
@@ -184,6 +184,7 @@ namespace proyectoIndividual
             if (dlgInformeTodos.ShowDialog() == DialogResult.OK)
             {
                 this.Meritos.getMeritoAño(dlgInformeTodos.Año);
+                
             }
 
             if (!this.View.IsDisposed) { this.View.Show(); }

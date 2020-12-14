@@ -55,6 +55,7 @@ namespace proyectoIndividual.Core
                 {
                     System.Console.WriteLine(merito);
                     tw.WriteLine(merito);
+                    getListAutores();
                 }
                 
             }
@@ -62,6 +63,39 @@ namespace proyectoIndividual.Core
             tw.Close();
 
             return null;
+        }
+
+        public List<string> getListAutores()
+        {
+            List<String> autores = new List<string>();
+            foreach (MeritoCientifico merito in this.listaMeritoCientificos)
+            {
+                autores.Add(merito.Autor);
+                System.Console.WriteLine(merito.Autor);
+            }
+            
+
+            return autores;
+        }
+
+        public int[] getNumeroVeces()
+        {
+            String[] palabras = getListAutores().ToArray();
+            int[] count = new int[palabras.Length];
+
+            for (int i = 0; i < palabras.Length; i++)
+            {
+                for (int j = 0; j < palabras.Length; j++)
+                {
+                    if (String.Compare(palabras[i], palabras[j], StringComparison.Ordinal) == 0)
+                    {
+                        count[i]++;
+                    }
+                    
+                }
+            }
+
+            return count;
         }
 
         public void VaciarLista()
