@@ -22,35 +22,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="daa05148-9ff2-424c-9ed8-6f8bdc976e83" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/proyectoIndividual/Core/GestionPublicacion.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/proyectoIndividual/Core/Publicacion.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/proyectoIndividual/Ui/Dlg/DlgBuscarMerito.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/proyectoIndividual/Ui/Dlg/DlgConsultaPublicacion.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/proyectoIndividual/Ui/Dlg/DlgInsertaPublicacion.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/proyectoIndividual/Ui/Dlg/DlgModificaPublicacion.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/proyectoIndividual/Ui/Dlg/DlgMostrarBusquedaMeritos.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.proyectoIndividual/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.proyectoIndividual/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.proyectoIndividual/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.proyectoIndividual/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proyectoIndividual/Core/GestionMeritoCientifico.cs" beforeDir="false" afterPath="$PROJECT_DIR$/proyectoIndividual/Core/GestionMeritoCientifico.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proyectoIndividual/Core/GestionMiembros.cs" beforeDir="false" afterPath="$PROJECT_DIR$/proyectoIndividual/Core/GestionMiembros.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proyectoIndividual/Ui/Dlg/DlgConsultaMerito.cs" beforeDir="false" afterPath="$PROJECT_DIR$/proyectoIndividual/Ui/Dlg/DlgConsultaMerito.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proyectoIndividual/Ui/Dlg/DlgConsultaMiembro.cs" beforeDir="false" afterPath="$PROJECT_DIR$/proyectoIndividual/Ui/Dlg/DlgConsultaMiembro.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proyectoIndividual/Ui/Dlg/DlgInsertaMerito.cs" beforeDir="false" afterPath="$PROJECT_DIR$/proyectoIndividual/Ui/Dlg/DlgInsertaMerito.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proyectoIndividual/Ui/Dlg/DlgInsertaMiembro.cs" beforeDir="false" afterPath="$PROJECT_DIR$/proyectoIndividual/Ui/Dlg/DlgInsertaMiembro.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proyectoIndividual/Ui/MainWindowCore.cs" beforeDir="false" afterPath="$PROJECT_DIR$/proyectoIndividual/Ui/MainWindowCore.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proyectoIndividual/Ui/MainWindowView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/proyectoIndividual/Ui/MainWindowView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proyectoIndividual/bin/Debug/Informe2020.txt" beforeDir="false" afterPath="$PROJECT_DIR$/proyectoIndividual/bin/Debug/Informe2020.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proyectoIndividual/bin/Debug/proyectoIndividual.exe" beforeDir="false" afterPath="$PROJECT_DIR$/proyectoIndividual/bin/Debug/proyectoIndividual.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proyectoIndividual/bin/Debug/proyectoIndividual.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/proyectoIndividual/bin/Debug/proyectoIndividual.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proyectoIndividual/obj/Debug/proyectoIndividual.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/proyectoIndividual/obj/Debug/proyectoIndividual.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proyectoIndividual/obj/Debug/proyectoIndividual.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/proyectoIndividual/obj/Debug/proyectoIndividual.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proyectoIndividual/obj/Debug/proyectoIndividual.csproj.GenerateResource.cache" beforeDir="false" afterPath="$PROJECT_DIR$/proyectoIndividual/obj/Debug/proyectoIndividual.csproj.GenerateResource.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proyectoIndividual/obj/Debug/proyectoIndividual.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/proyectoIndividual/obj/Debug/proyectoIndividual.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proyectoIndividual/obj/Debug/proyectoIndividual.exe" beforeDir="false" afterPath="$PROJECT_DIR$/proyectoIndividual/obj/Debug/proyectoIndividual.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proyectoIndividual/obj/Debug/proyectoIndividual.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/proyectoIndividual/obj/Debug/proyectoIndividual.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proyectoIndividual/proyectoIndividual.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/proyectoIndividual/proyectoIndividual.csproj" afterDir="false" />
-    </list>
+    <list default="true" id="daa05148-9ff2-424c-9ed8-6f8bdc976e83" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -161,6 +133,7 @@
       <workItem from="1607949569645" duration="1244000" />
       <workItem from="1607955500237" duration="997000" />
       <workItem from="1607963689619" duration="20597000" />
+      <workItem from="1607985460733" duration="232000" />
     </task>
     <servers />
   </component>
@@ -179,35 +152,36 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1877" height="281" key="GridCell.Tab.0.bottom" timestamp="1607984423948">
+    <state width="1877" height="254" key="GridCell.Tab.0.bottom" timestamp="1607985693063">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1557" height="221" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1607520878783" />
     <state width="1877" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1366.76.1366.728@0.0.1920.1040" timestamp="1607984423948" />
-    <state width="1877" height="254" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1607950808288" />
-    <state width="1877" height="281" key="GridCell.Tab.0.center" timestamp="1607984423947">
+    <state width="1877" height="254" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1607985693063" />
+    <state width="1877" height="254" key="GridCell.Tab.0.center" timestamp="1607985693063">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1557" height="221" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1607520878783" />
     <state width="1877" height="281" key="GridCell.Tab.0.center/0.0.1920.1040/-1366.76.1366.728@0.0.1920.1040" timestamp="1607984423947" />
-    <state width="1877" height="254" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1607950808288" />
-    <state width="1877" height="281" key="GridCell.Tab.0.left" timestamp="1607984423947">
+    <state width="1877" height="254" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1607985693063" />
+    <state width="1877" height="254" key="GridCell.Tab.0.left" timestamp="1607985693063">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1557" height="221" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1607520878783" />
     <state width="1877" height="281" key="GridCell.Tab.0.left/0.0.1920.1040/-1366.76.1366.728@0.0.1920.1040" timestamp="1607984423947" />
-    <state width="1877" height="254" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1607950808288" />
-    <state width="1877" height="281" key="GridCell.Tab.0.right" timestamp="1607984423947">
+    <state width="1877" height="254" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1607985693063" />
+    <state width="1877" height="254" key="GridCell.Tab.0.right" timestamp="1607985693063">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1557" height="221" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1607520878783" />
     <state width="1877" height="281" key="GridCell.Tab.0.right/0.0.1920.1040/-1366.76.1366.728@0.0.1920.1040" timestamp="1607984423947" />
-    <state width="1877" height="254" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1607950808288" />
+    <state width="1877" height="254" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1607985693063" />
     <state width="1877" height="375" key="GridCell.Tab.1.bottom" timestamp="1607981955268">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
