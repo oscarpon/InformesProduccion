@@ -6,12 +6,15 @@
     <e p="C:\Users\oscar\RiderProjects\Proyecto3_DIA\InformesProduccion" t="IncludeFlat">
       <e p="packages" t="ExcludeRecursive" />
       <e p="proyectoIndividual" t="IncludeRecursive">
+        <e p="app.config" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="Core" t="Include">
           <e p="GestionMeritoCientifico.cs" t="Include" />
           <e p="GestionMiembros.cs" t="Include" />
+          <e p="GestionPublicacion.cs" t="Include" />
           <e p="MeritoCientifico.cs" t="Include" />
           <e p="Miembro.cs" t="Include" />
+          <e p="Publicacion.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive" />
         <e p="packages.config" t="Include" />
@@ -21,13 +24,18 @@
         <e p="proyectoIndividual.csproj" t="IncludeRecursive" />
         <e p="UI" t="Include">
           <e p="Dlg" t="Include">
+            <e p="DlgBuscarMerito.cs" t="Include" />
             <e p="DlgConsultaMerito.cs" t="Include" />
             <e p="DlgConsultaMiembro.cs" t="Include" />
+            <e p="DlgConsultaPublicacion.cs" t="Include" />
             <e p="DlgInformeTodos.cs" t="Include" />
             <e p="DlgInsertaMerito.cs" t="Include" />
             <e p="DlgInsertaMiembro.cs" t="Include" />
+            <e p="DlgInsertaPublicacion.cs" t="Include" />
             <e p="DlgModificaMerito.cs" t="Include" />
             <e p="DlgModificaMiembro.cs" t="Include" />
+            <e p="DlgModificaPublicacion.cs" t="Include" />
+            <e p="DlgMostrarBusquedaMeritos.cs" t="Include" />
             <e p="GraficoAnual.cs" t="Include" />
             <e p="GraficoAnual.Designer.cs" t="Include" />
             <e p="GraficoAnual.resx" t="Include" />

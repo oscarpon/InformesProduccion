@@ -24,8 +24,9 @@ namespace proyectoIndividual
             this.View = new MainWindowView();
             Console.Write("Main core");
             Console.WriteLine(this.Meritos);
-            this.Meritos = new GestionMeritoCientifico();
-            this.Miembros = new GestionMiembros();
+            this.Meritos = GestionMeritoCientifico.RecuperarXml();
+            this.Miembros = GestionMiembros.RecuperarXml();
+            this.Publicaciones = GestionPublicacion.RecuperarXml();
            
          
 
@@ -46,6 +47,13 @@ namespace proyectoIndividual
             //miembros
             this.View.opConsultaMiembro.Click += (sender, e) => this.ConsultaMiembro();
             this.View.opInsertarMiembro.Click += (sender, e) => this.InsertaMiembro();
+            
+            //publicaciones
+            this.View.opConsultarPublicacion.Click  += (sender, e) => this.ConsultaPublicacion();
+            this.View.opInsertarPublicacion.Click += (sender, e) => this.InsertaPublicacion();
+            
+            //Buscar
+            this.View.BuscarMerito.Click += (sender, e) => this.BuscarMerito();
 
             
         }
@@ -88,6 +96,54 @@ namespace proyectoIndividual
 
         }
         
+        
+        
+        void InsertaPublicacion()
+        {
+            Console.WriteLine("Inserta Publicacion");
+            var dlgInsertaPublicacion = new DlgInsertaPublicacion(this.Publicaciones);
+
+            this.View.Hide();
+            Publicacion nuevaPublicacion = new Publicacion("","","","","");
+            if (dlgInsertaPublicacion.ShowDialog() == DialogResult.OK)
+            {
+                nuevaPublicacion.Tipo = dlgInsertaPublicacion.Tipo.ToString();
+                nuevaPublicacion.TituloP = dlgInsertaPublicacion.TituloP;
+                nuevaPublicacion.IssnP = dlgInsertaPublicacion.IssnP;
+                nuevaPublicacion.EditorialP = dlgInsertaPublicacion.EditorialP;
+                nuevaPublicacion.RegEditorialP1 = dlgInsertaPublicacion.RegEditorialP;
+
+                //nuevaPublicacion = new Publicacion(dlgInsertaPublicacion.Tipo.ToString(), dlgInsertaPublicacion.IssnP.ToString(), dlgInsertaPublicacion.TituloP.ToString(), dlgInsertaPublicacion.EditorialP.ToString(), dlgInsertaPublicacion.RegEditorialP.ToString());
+                    Console.WriteLine(nuevaPublicacion);
+                    this.Publicaciones.añadirPublicacion(nuevaPublicacion);
+                }
+            
+            
+
+            if (!this.View.IsDisposed) { this.View.Show(); }
+            else { System.Windows.Forms.Application.Exit(); }
+        }
+        
+        
+        
+        void ConsultaPublicacion()
+        {
+            Console.WriteLine("Consulta Publicacion");
+            var dlgConsultaPublicacion = new DlgConsultaPublicacion(this.Publicaciones);
+
+
+            this.View.Hide();
+
+            if (dlgConsultaPublicacion.ShowDialog() == DialogResult.OK) { }
+
+            if (!this.View.IsDisposed) { this.View.Show(); }
+            else { System.Windows.Forms.Application.Exit(); }
+
+        }
+        
+        
+        
+        
         void InsertaMiembro()
         {
             Console.WriteLine("Inserta Miembro");
@@ -120,6 +176,85 @@ namespace proyectoIndividual
 
             if (dlgConsultaMiembro.ShowDialog() == DialogResult.OK) { }
 
+            if (!this.View.IsDisposed) { this.View.Show(); }
+            else { System.Windows.Forms.Application.Exit(); }
+
+        }
+        
+        void BuscarMerito()
+        {
+            Console.WriteLine("Buscar merito");
+            var dlgBuscarMerito = new DlgBuscarMerito(this.Meritos);
+
+            GestionMeritoCientifico meritosBuscados = new GestionMeritoCientifico();
+            GestionMeritoCientifico aux = new GestionMeritoCientifico();
+            GestionMeritoCientifico aux2 = new GestionMeritoCientifico();
+            //Console.WriteLine(meritosBuscados.ToString());
+            this.View.Hide();
+
+            MeritoCientifico m = new MeritoCientifico("",0,"",0,0,0,"");
+            
+            if (dlgBuscarMerito.ShowDialog() == DialogResult.OK)
+            { 
+                m = new MeritoCientifico(dlgBuscarMerito.Tipo,0,"",int.Parse(dlgBuscarMerito.Año),0,0,dlgBuscarMerito.Autor);
+                
+                if (!m.Tipo.Equals("Vacio"))
+                {
+                    foreach (MeritoCientifico toret in Meritos.List)
+                    {
+                        if (toret.Tipo.Equals(m.Tipo))
+                        {
+                            aux.añadirMeritoCientifico(toret);
+                        }
+                        //Console.WriteLine("llego1");
+                    }
+                    //Console.WriteLine("llego2");
+                }
+                else
+                {
+                    aux = Meritos;
+                }
+                
+                if (!m.Año.Equals(0))
+                {
+                    Console.WriteLine("llego3");
+                    foreach (var toret in aux.List)
+                    {
+                        if (toret.Año.Equals(m.Año))
+                        {
+                            aux2.añadirMeritoCientifico(toret);
+                        }
+                    }
+                }
+                else
+                {
+                    aux2 = aux;
+                }
+                
+                if (!m.Autor.Equals(""))
+                {
+                    foreach (var toret in aux2.List)
+                    {
+                        if (toret.Autor.Equals(m.Autor))
+                        {
+                            meritosBuscados.añadirMeritoCientifico(toret);
+                        }
+                    }
+                }
+                else
+                {
+                    meritosBuscados = aux2;
+                }
+                
+                var dlgMostrarBusqueda = new DlgMostrarBusquedaMeritos(meritosBuscados);
+                this.View.Hide();
+            
+                if (dlgMostrarBusqueda.ShowDialog() == DialogResult.OK) { }
+            }
+
+
+
+            Console.WriteLine(meritosBuscados.ToString());
             if (!this.View.IsDisposed) { this.View.Show(); }
             else { System.Windows.Forms.Application.Exit(); }
 
@@ -194,6 +329,8 @@ namespace proyectoIndividual
         
         public MainWindowView View { get; private set; }
         private GestionMeritoCientifico Meritos { get; set; }
+        
+        private GestionPublicacion Publicaciones { get; set; }
         
         private GestionMiembros Miembros { get; set; }
     }

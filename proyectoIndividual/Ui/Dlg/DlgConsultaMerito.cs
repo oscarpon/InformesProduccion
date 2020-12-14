@@ -533,6 +533,7 @@ namespace proyectoIndividual.Ui.Dlg
 
         public void Guardar()
         {
+            this.meritos.GuardarXml();
             Console.WriteLine("Guardado en XML");
 
         }
@@ -547,7 +548,9 @@ namespace proyectoIndividual.Ui.Dlg
         public void Salir()
         {
             Console.WriteLine("Guardar y salir");
-
+            this.meritos.GuardarXml();
+            this.publicacion.GuardarXml();
+            this.miembros.GuardarXml();
             Application.Exit();
         }
         
@@ -567,6 +570,8 @@ namespace proyectoIndividual.Ui.Dlg
 
 
         private GestionMeritoCientifico meritos;
+        private GestionMiembros miembros;
+        private GestionPublicacion publicacion;
    
 
         private MainWindowCore mainWindowCore;

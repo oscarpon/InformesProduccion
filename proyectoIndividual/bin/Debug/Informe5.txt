@@ -1,0 +1,9 @@
+Informe del año:5
+(MeritoCientifico) Tipo: Libro, DOI: 2, ISSN: 5, Año de publicacion: 5,  pagina de inicio: 5, pagina de final 5, autor: safda
+
+(MeritoCientifico) Tipo: Libro, DOI: 1, ISSN: 5, Año de publicacion: 5,  pagina de inicio: 5, pagina de final 5, autor: asdasd
+
+(MeritoCientifico) Tipo: Articulo, DOI: 2, ISSN: 5, Año de publicacion: 5,  pagina de inicio: 5, pagina de final 5, autor: asdas
+
+(MeritoCientifico) Tipo: Libro, DOI: 1, ISSN: gfhfd, Año de publicacion: 5,  pagina de inicio: 5, pagina de final 5, autor: sdfds
+

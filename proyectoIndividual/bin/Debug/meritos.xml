@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<meritos_cientificos>
+  <merito_cientifico tipo="Libro" doi="2" issn="5" año="5" pagina_inicio="5" pagina_final="5" autor="safda" />
+  <merito_cientifico tipo="Libro" doi="1" issn="5" año="5" pagina_inicio="5" pagina_final="5" autor="asdasd" />
+  <merito_cientifico tipo="Articulo" doi="2" issn="5" año="5" pagina_inicio="5" pagina_final="5" autor="asdas" />
+  <merito_cientifico tipo="Libro" doi="1" issn="gfhfd" año="5" pagina_inicio="5" pagina_final="5" autor="sdfds" />
+</meritos_cientificos>

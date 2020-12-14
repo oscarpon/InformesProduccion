@@ -1,18 +1,18 @@
 ﻿using System.Windows.Forms;
 using proyectoIndividual.Core;
 using System;
-using System.Collections.Generic;
 using System.Drawing;
+using proyectoIndividual;
 
 namespace proyectoIndividual.Ui.Dlg
 {
-    public class DlgConsultaMiembro : Form
+    public class DlgConsultaPublicacion : Form
     {
         
-        public DlgConsultaMiembro(GestionMiembros Miembros)
+        public DlgConsultaPublicacion(GestionPublicacion Publicaciones)
         {
             this.mainWindowCore = new MainWindowCore();
-            this.Miembros = Miembros;
+            this.publicaciones = Publicaciones;
             this.BuildGUI();
             this.CenterToScreen();
             
@@ -21,7 +21,7 @@ namespace proyectoIndividual.Ui.Dlg
             
             this.GrdLista.Click += (sender, e) => ClickLista();
             this.opGuardar.Click += (sender, e) => this.Guardar();
-            this.opVaciarMiembros.Click += (sender, e) => this.VaciarListaDeMiembros();
+            this.opVaciarPublicaciones.Click += (sender, e) => this.VaciarListaDePublicaciones();
             this.opSalir.Click += (sender, e) => { this.DialogResult = DialogResult.Cancel; this.Salir(); };
             this.opVolver.Click += (sender, e) => this.DialogResult = DialogResult.Cancel;
         }
@@ -47,7 +47,7 @@ namespace proyectoIndividual.Ui.Dlg
 
             this.MinimumSize = new Size(1000, 400);
             this.Resize += (obj, e) => this.ResizeWindow();
-            this.Text = "Gestion de Miembros - Consulta Miembros";
+            this.Text = "Gestion de Publicaciones - Consultar Publicaciones";
 
             this.Actualiza();
             this.ResumeLayout(true);
@@ -59,7 +59,7 @@ namespace proyectoIndividual.Ui.Dlg
             this.mPpal = new MainMenu();
             this.mArchivo = new MenuItem("&Archivo");
             this.opGuardar = new MenuItem("&Guardar");
-            this.opVaciarMiembros = new MenuItem("&Vaciar Miembros");
+            this.opVaciarPublicaciones = new MenuItem("&Vaciar Publicaciones");
             this.opSalir = new MenuItem("&Salir");
             this.opVolver = new MenuItem("&Volver");
             this.opSalir.Shortcut = Shortcut.CtrlQ;
@@ -67,7 +67,7 @@ namespace proyectoIndividual.Ui.Dlg
             
             this.mArchivo.MenuItems.Add(this.opVolver);
             this.mArchivo.MenuItems.Add(this.opGuardar);
-            this.mArchivo.MenuItems.Add(this.opVaciarMiembros);
+            this.mArchivo.MenuItems.Add(this.opVaciarPublicaciones);
             this.mArchivo.MenuItems.Add(this.opSalir);
             
 
@@ -77,9 +77,7 @@ namespace proyectoIndividual.Ui.Dlg
             this.Menu = mPpal;
         }
         
-
-
-
+        
         private Panel BuildPanelDetalle()
         {
             var pnlDetalle = new Panel {
@@ -201,8 +199,7 @@ namespace proyectoIndividual.Ui.Dlg
             buttonCellTemplate8.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
             buttonCellTemplate8.Style.Font = new Font(FontFamily.GenericMonospace, 11, FontStyle.Regular);
 
-
-
+            
             var columna0 = new DataGridViewTextBoxColumn 
             {
                 SortMode = DataGridViewColumnSortMode.NotSortable,
@@ -216,7 +213,15 @@ namespace proyectoIndividual.Ui.Dlg
             {
                 SortMode = DataGridViewColumnSortMode.NotSortable,
                 CellTemplate = textCellTemplate1,
-                HeaderText = "DNI",
+                HeaderText = "tipo",
+                Width = 20,
+                ReadOnly = true
+            };
+            var columna2 = new DataGridViewTextBoxColumn 
+            {
+                SortMode = DataGridViewColumnSortMode.NotSortable,
+                CellTemplate = textCellTemplate2,
+                HeaderText = "Issn",
                 Width = 20,
                 ReadOnly = true
             };
@@ -224,43 +229,32 @@ namespace proyectoIndividual.Ui.Dlg
             var columna3 = new DataGridViewTextBoxColumn 
             {
                 SortMode = DataGridViewColumnSortMode.NotSortable,
-                CellTemplate = textCellTemplate2,
-                HeaderText = "Email",
-                Width = 20,
-                ReadOnly = true
-            };
-
-            var columna2 = new DataGridViewTextBoxColumn  
-            {
-                SortMode = DataGridViewColumnSortMode.NotSortable,
-                CellTemplate = textCellTemplate3,
-                HeaderText = "Nombre",
-                Width = 15,
-                ReadOnly = true
-            };
-
-            var columna4 = new DataGridViewTextBoxColumn 
-            {
-                SortMode = DataGridViewColumnSortMode.NotSortable,
                 CellTemplate = textCellTemplate4,
-                HeaderText = "Teléfono",
+                HeaderText = "Titulo",
                 Width = 15,
                 ReadOnly = true
             };
             
 
+            
+            var columna4 = new DataGridViewTextBoxColumn 
+            {
+                SortMode = DataGridViewColumnSortMode.NotSortable,
+                CellTemplate = textCellTemplate4,
+                HeaderText = "Editorial",
+                Width = 15,
+                ReadOnly = true
+            };
             
             var columna5 = new DataGridViewTextBoxColumn 
             {
                 SortMode = DataGridViewColumnSortMode.NotSortable,
                 CellTemplate = textCellTemplate4,
-                HeaderText = "Dirección",
+                HeaderText = "RegEditorial",
                 Width = 15,
                 ReadOnly = true
             };
-
             
-
             var columna6 = new DataGridViewButtonColumn  
             {
                 SortMode = DataGridViewColumnSortMode.NotSortable,
@@ -302,9 +296,9 @@ namespace proyectoIndividual.Ui.Dlg
                  int posicion = this.GrdLista.CurrentCellAddress.X;
 
                 
-                 if (posicion < 5 && this.Miembros.List.Count > fila)
+                 if (posicion < 6 && this.publicaciones.List.Count > fila)
                  {
-                     this.edDetalle.Text = this.Miembros.List[fila].ToString();
+                     this.edDetalle.Text = this.publicaciones.List[fila].ToString();
                      this.edDetalle.SelectionStart = this.edDetalle.Text.Length;
                      this.edDetalle.SelectionLength = 0;
                  }
@@ -334,20 +328,19 @@ namespace proyectoIndividual.Ui.Dlg
              this.GrdLista.Width = width;
              this.GrdLista.Height = 15;
 
-
-
+             
              this.GrdLista.Columns[0].Width =
-                 (int)System.Math.Floor(width * .03); // Número de miembro
+                 (int)System.Math.Floor(width * .03); // Número de Publicacion
              this.GrdLista.Columns[1].Width =
-                 (int)System.Math.Floor(width * .10); // DNI
+                 (int)System.Math.Floor(width * .10); // Tipo
              this.GrdLista.Columns[2].Width =
-                 (int)System.Math.Floor(width * .20); // Email
+                 (int)System.Math.Floor(width * .20); // Issn
              this.GrdLista.Columns[3].Width =
-                 (int)System.Math.Floor(width * .14); // Nombre
+                 (int)System.Math.Floor(width * .14); // Titulo
              this.GrdLista.Columns[4].Width =
-                 (int)System.Math.Floor(width * .14); // Telefono
+                 (int)System.Math.Floor(width * .14); // Editorial
              this.GrdLista.Columns[5].Width =
-                 (int)System.Math.Floor(width * .12); // Calle
+                 (int)System.Math.Floor(width * .12); // RegEditorial
              this.GrdLista.Columns[6].Width =
                  (int)System.Math.Floor(width * .12); // Editar
              this.GrdLista.Columns[7].Width =
@@ -359,13 +352,13 @@ namespace proyectoIndividual.Ui.Dlg
          {
              Console.WriteLine("Aquí es cuando se actualiza la lista");
 
-             // var consultaGestion = new DlgConsultaMiembro();
 
 
-             int numElementos = this.Miembros.List.Count;
-             Console.WriteLine("Número de miembros: " + numElementos);
 
-             this.SbStatus.Text = ("Número de miembros actuales: " + numElementos);
+             int numElementos = this.publicaciones.List.Count;
+             Console.WriteLine("Número de Publicaciones: " + numElementos);
+
+             this.SbStatus.Text = ("Número de Publicaciones actuales: " + numElementos);
 
              for (int i = 0; i < numElementos; i++)
              {
@@ -396,18 +389,16 @@ namespace proyectoIndividual.Ui.Dlg
              }
 
              DataGridViewRow fila = this.GrdLista.Rows[numFila];
-             Miembro miembro = this.Miembros.List[numFila];
-
-
+             Publicacion publicacion = this.publicaciones.List[numFila];
+             
+             
              fila.Cells[0].Value = (numFila + 1).ToString().PadLeft(4, ' ');
-             fila.Cells[1].Value = miembro.Dni; 
-             fila.Cells[2].Value = miembro.Nombre; 
-             fila.Cells[3].Value = miembro.Email;
-             fila.Cells[4].Value = miembro.Telefono; 
-             fila.Cells[5].Value = miembro.DireccionPostal;
-            
-             
-             
+             fila.Cells[1].Value = publicacion.Tipo;
+             fila.Cells[2].Value = publicacion.IssnP;
+             fila.Cells[3].Value = publicacion.TituloP;
+             fila.Cells[4].Value = publicacion.EditorialP;
+             fila.Cells[5].Value = publicacion.RegEditorialP1;
+
              fila.Cells[6].Value = "Editar";
              fila.Cells[7].Value = "Eliminar";
 
@@ -416,7 +407,7 @@ namespace proyectoIndividual.Ui.Dlg
              {
                  if (celda.ColumnIndex < 6)
                  {
-                     celda.ToolTipText = miembro.ToString();
+                     celda.ToolTipText = publicacion.ToString();
                  }
              }
          }
@@ -431,82 +422,89 @@ namespace proyectoIndividual.Ui.Dlg
                  {
                      int fila = this.GrdLista.CurrentCell.RowIndex;
                      
-                     Console.WriteLine("Elemento seleccionado  DNI: " + (string)this.GrdLista.Rows[fila].Cells[1].Value);
-                     this.ModificaMiembro((string)this.GrdLista.Rows[fila].Cells[1].Value);
+                     Console.WriteLine("Elemento seleccionado  ISSN: " + (string)this.GrdLista.Rows[fila].Cells[3].Value);
+                     this.ModificaPublicacion((string)this.GrdLista.Rows[fila].Cells[3].Value);
                  }
                  else if (this.GrdLista.CurrentCell.ColumnIndex == 7)
                  {
-                     this.EliminaMiembro();
+                     this.EliminaPublicacion();
                  }
 
                  this.Actualiza();
              }
-             catch (Exception) { }
+             catch (Exception exc) { Console.WriteLine(exc.Message);}
          }
         
          
-         public void EliminaMiembro()
+         public void EliminaPublicacion()
          {
-             Console.WriteLine("Eliminar Miembro");
-             var dni = (string)this.GrdLista.CurrentRow.Cells[1].Value;
-             var nombre = (string)this.GrdLista.CurrentRow.Cells[2].Value;
-             Console.WriteLine(nombre + " va a ser borrado");
+             Console.WriteLine("Eliminar Publicacion");
+             var Issn = (string)this.GrdLista.CurrentRow.Cells[2].Value;
+             Console.WriteLine(Issn + " va a ser borrado");
 
 
              //Dialogo de confirmación de eliminación
              DialogResult result;
-             string mensaje = "¿Está seguro de que desea eliminar a " + nombre + ", del listado de miembros?";
-             string tittle = "Eliminar miembro";
+             string mensaje = "¿Está seguro de que desea eliminar a " + Issn + " de los meritos cientificos?";
+             string tittle = "Eliminar merito cientifico";
             
              result = MessageBox.Show(mensaje, tittle, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             
 
              if (result == DialogResult.Yes)
              {
-                 this.Miembros.borrarMiembro(this.Miembros.getMiembro(dni));
-             
+                 this.publicaciones.borrarPublicacion(this.publicaciones.getPublicaciones(Issn));
              }
          }
          
-         public void ModificaMiembro(String dni)
+         public void ModificaPublicacion(String Issn)
          {
-             Console.WriteLine("Modifica Miembro");
-             Miembro miembroModificado = this.Miembros.getMiembro(dni);
-             Console.WriteLine("Miembro modificado: " + miembroModificado.ToString());
+             Console.WriteLine("Modificar Publicacion");
+             //Console.WriteLine(this.meritos.getMeritoCientifico(Issn));
+             Publicacion publicacionModificada = this.publicaciones.getPublicaciones(Issn);
+             Console.WriteLine("Publicacion modificado: " + publicacionModificada.ToString());
              
-             var dlgModificar = new DlgModificaMiembro(miembroModificado);
-             
+             var dlgModificar = new DlgModificaPublicacion(publicacionModificada);
+             //Console.WriteLine("aqui llego");
+             //Console.WriteLine(dlgModificar.ToString());
 
              this.Hide();
              if (dlgModificar.ShowDialog() == DialogResult.OK)
              {
-                 this.Miembros.borrarMiembro(miembroModificado);
-                 string DNI = dlgModificar.DNI;
-                 string Nombre = dlgModificar.Nombre;
-                 long Telefono = dlgModificar.Telefono;
-                 string Email = dlgModificar.Email;
-                 string DireccionPostal = dlgModificar.DirPostal;
-
-                 Miembro m = new Miembro(DNI, Nombre, Telefono, Email, DireccionPostal);
-                 Console.WriteLine("Miembro modificado: " + m.ToString());
-                 this.Miembros.añadirMiembro(m);
+                 
+                 this.publicaciones.borrarPublicacion(publicacionModificada);
+                 
+                 //Console.WriteLine("aqui llego1");
+                 string tipo = dlgModificar.Tipo;
+                 string ISSN = dlgModificar.Issn;
+                 string titulo = dlgModificar.Titulo;
+                 string editorial = dlgModificar.Editorial;
+                 string regeditorial = dlgModificar.RegEditorial;
+                 Console.WriteLine("aqui llego");
+                 Publicacion p = new Publicacion(tipo,ISSN, titulo, editorial, regeditorial);
+                 Console.WriteLine(p.ToString());
+                 Console.WriteLine("Publicacion modificada: " + p.ToString());
+                 this.publicaciones.añadirPublicacion(p);
                  this.Actualiza();
 
              }
 
-             if (!this.IsDisposed) { this.Show(); }
-             else { Application.Exit(); }
+             if (!this.IsDisposed)
+             {
+                 this.Show();
+             }else { Application.Exit(); }
          }
 
         public void Guardar()
         {
             Console.WriteLine("Guardado en XML");
-            this.Miembros.GuardarXml();
+            this.publicaciones.GuardarXml();
+
         }
 
-        public void VaciarListaDeMiembros()
+        public void VaciarListaDePublicaciones()
         {
-            this.Miembros.VaciarLista();
+            this.publicaciones.VaciarLista();
             this.Actualiza();
             Console.WriteLine("Lista vaciada");
             
@@ -514,15 +512,13 @@ namespace proyectoIndividual.Ui.Dlg
         public void Salir()
         {
             Console.WriteLine("Guardar y salir");
-            this.Miembros.GuardarXml();
-            this.meritos.GuardarXml();
-            this.publicacion.GuardarXml();
+            this.publicaciones.GuardarXml();
             Application.Exit();
         }
         
         private MainMenu mPpal;
         public MenuItem mArchivo;
-        public MenuItem opVaciarMiembros;
+        public MenuItem opVaciarPublicaciones;
         public MenuItem opGuardar;
         public MenuItem opSalir;
         public MenuItem opVolver;
@@ -535,9 +531,7 @@ namespace proyectoIndividual.Ui.Dlg
         public DataGridView GrdLista;
 
 
-        private GestionMiembros Miembros;
-        private GestionMeritoCientifico meritos;
-        private GestionPublicacion publicacion;
+        private GestionPublicacion publicaciones;
    
 
         private MainWindowCore mainWindowCore;

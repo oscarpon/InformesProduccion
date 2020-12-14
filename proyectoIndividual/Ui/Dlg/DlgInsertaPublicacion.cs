@@ -1,5 +1,4 @@
-﻿
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using proyectoIndividual.Core;
 using System;
 
@@ -9,20 +8,20 @@ namespace proyectoIndividual.Ui.Dlg
     using System.Windows.Forms;
     using System.Drawing;
    
-    public class DlgInsertaMiembro : Form
+    public class DlgInsertaPublicacion : Form
     {
         
         
-        public DlgInsertaMiembro()
+        public DlgInsertaPublicacion()
         {
             this.Build();
             this.CenterToScreen();
         }
 
-        public DlgInsertaMiembro(GestionMiembros miembros)
+        public DlgInsertaPublicacion(GestionPublicacion publicaciones)
         {
             
-            this.Miembros = miembros;
+            this.Publicaciones = publicaciones;
             this.Build();
             this.CenterToScreen();
             
@@ -51,31 +50,31 @@ namespace proyectoIndividual.Ui.Dlg
             
             pnlInserta.SuspendLayout();
             this.Controls.Add(pnlInserta);
+            //(string tipo, string issnP, string tituloP, string editorialP, string regEditorialP)
+            var pnlPublicacion = this.BuildPublicacion();
+            pnlInserta.Controls.Add(pnlPublicacion);
+
+            //Tipo
+            var pnlTipo = this.BuildTipo();
+            pnlInserta.Controls.Add(pnlTipo);
             
-            var pnlMiembro = this.BuildMiembro();
-            pnlInserta.Controls.Add(pnlMiembro);
+            //ISSN
+            var pnlIssnP = this.BuildIssn();
+            pnlInserta.Controls.Add(pnlIssnP);
             
-            //DNI
-            var pnlDNI = this.BuildDNI();
-            pnlInserta.Controls.Add(pnlDNI);
+            //Titulo
+            var pnlTituloP = this.BuildTituloP();
+            pnlInserta.Controls.Add(pnlTituloP);
+
+
+            //Editorial
+            var pnlEditorialP = this.BuildEditorialP();
+            pnlInserta.Controls.Add(pnlEditorialP);
+
             
-            //Nombre
-            var pnlNombre = this.BuildNombre();
-            pnlInserta.Controls.Add(pnlNombre);
-
-            //Telefono
-            var pnlTelef = this.BuildTelefono();
-            pnlInserta.Controls.Add(pnlTelef);
-
-
-            //Email
-            var pnlEmail = this.BuildEmail();
-            pnlInserta.Controls.Add(pnlEmail);
-
-
-            //Direccion Postal
-            var pnlDirPostal = this.BuildDirPostal();
-            pnlInserta.Controls.Add(pnlDirPostal);
+            //Registro Editorial
+            var pnlRegEditorialP = this.BuildRegEditorialP();
+            pnlInserta.Controls.Add(pnlRegEditorialP);
 
             
             var pnlBotones = this.BuildBotonesPanel();
@@ -148,19 +147,19 @@ namespace proyectoIndividual.Ui.Dlg
             return pnlBotones;
         }
         
-         Panel BuildMiembro()
+         Panel BuildPublicacion()
         {
             
-            this.pnlMiembro = new Panel()
+            this.pnlPublicacion = new Panel()
             {
                 Dock = DockStyle.Fill,
                 MaximumSize = new Size(int.MaxValue, 30),
                 Height = 30,
             };
 
-            var lblMiembro = new Label()
+            var lblPublicacion = new Label()
             {
-                Text = "Datos del Miembro",
+                Text = "Datos de la publicación",
                 Dock = DockStyle.Top,
                 Font = new Font("Microsoft Sans Serif", 18, FontStyle.Regular, GraphicsUnit.Point),
                 ForeColor = Color.White,
@@ -168,182 +167,169 @@ namespace proyectoIndividual.Ui.Dlg
             };
 
             
-            pnlMiembro.Controls.Add(lblMiembro);
+            pnlPublicacion.Controls.Add(lblPublicacion);
 
-            return pnlMiembro;
+            return pnlPublicacion;
 
         }
          
-         Panel BuildDNI()
+         Panel BuildTipo()
          {
-             this.pnlDNI = new Panel()
+             this.pnlTipo = new Panel()
              {
                  Dock = DockStyle.Fill,
                  
              };
 
-             var lblDNI = new Label()
+             var lblTipo = new Label()
              {
-                 Text = "DNI:",
+                 Text = "Tipo:",
                  Dock = DockStyle.Left,
                  ForeColor = Color.White,
                  Width = 150,
                  TextAlign = ContentAlignment.TopRight,
              };
 
-             this.tbDNI = new TextBox()
-             {
-                 Left = 0,
-                 Width = 250,
-                 Anchor = AnchorStyles.Bottom,
-             };
-
-             this.tbDNI.Validating += (sender, cancelArgs) =>
-             {
-                 var btAccept = (Button)this.AcceptButton;
-                 bool invalid = string.IsNullOrEmpty(this.DNI);
-                 
-
-                 invalid = invalid || this.tbDNI.Text == "";
-
-                 if (invalid || this.tbDNI.Text == "")
-                 {
-
-                     string mensaje = "El DNI no puede estar vacío";
-                     MessageBox.Show(mensaje, "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                     this.tbDNI.Focus();
-                 }
-
-                 btAccept.Enabled = !invalid;
-             };
-
-             pnlDNI.MaximumSize = new Size(int.MaxValue, tbDNI.Height * 2);
-
-             pnlDNI.Controls.Add(this.tbDNI);
-             pnlDNI.Controls.Add(lblDNI);
-
-             return pnlDNI;
-         }
-         
-         Panel BuildNombre()
-         {
-             this.pnlNombre = new Panel()
+             this.tbTipo = new ComboBox()
              {
                  Dock = DockStyle.Fill,
-                 Location = new Point(Left, this.pnlDNI.Top + this.pnlDNI.Height + 10),
-             };
-
-             var lblNombre = new Label()
-             {
-                 Location = new Point(Left, this.pnlDNI.Top + this.pnlDNI.Height + 10),
-                 Text = "Nombre:",
-                 Dock = DockStyle.Left,
-                 ForeColor = Color.White,
-                 Width = 150,
-                 TextAlign = ContentAlignment.TopRight,
-             };
-
-             this.tbNombre = new TextBox()
-             {
+                 DropDownStyle = ComboBoxStyle.DropDownList,
                  Left = 0,
                  Width = 250,
                  Anchor = AnchorStyles.Bottom,
-             };
-
-             this.tbNombre.Validating += (sender, cancelArgs) =>
-             {
-                 var btAccept = (Button)this.AcceptButton;
-                 bool invalid = string.IsNullOrEmpty(this.Nombre);
-
-                 invalid = invalid || this.tbNombre.Text == "";
-
-                 if (invalid || this.tbNombre.Text == "")
-                 {
-
-                     string mensaje = "El nombre no puede estar vacío";
-                     MessageBox.Show(mensaje, "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                     this.tbNombre.Focus();
-                 }
-
-                 btAccept.Enabled = !invalid;
-             };
-
-             pnlNombre.MaximumSize = new Size(int.MaxValue, tbNombre.Height * 2);
-
-             pnlNombre.Controls.Add(this.tbNombre);
-             pnlNombre.Controls.Add(lblNombre);
-
-             return pnlNombre;
-         }
-         
-         Panel BuildTelefono()
-         {
-             this.pnlTelef = new Panel()
-             {
-                 Dock = DockStyle.Fill,
-                 Location = new Point(Left, this.pnlNombre.Top + this.pnlNombre.Height + 10),
-             };
-
-             var lblTelef = new Label()
-             {
-                 Location = new Point(Left, this.pnlNombre.Top + this.pnlNombre.Height + 10),
-                 Text = "Teléfono:",
-                 Dock = DockStyle.Left,
-                 ForeColor = Color.White,
-                 Width = 150,
-                 TextAlign = ContentAlignment.TopRight,
-             };
-
-             this.mtbTelef = new MaskedTextBox()
-             {
-                 Left = 0,
-                 Width = 250,
-                 Anchor = AnchorStyles.Bottom,
-                 Mask = "000000000"
              };
              
-             this.mtbTelef.Validating += (sender, cancelArgs) =>
-             {
-                 var btAccept = (Button)this.AcceptButton;
-                 /*bool invalid = string.IsNullOrEmpty(this.Telefono.ToString());
+             this.tbTipo.Items.AddRange( new [] {
+                 "Libro", "Revista", "Congreso"
+             } );
+             this.tbTipo.Text = (string) this.tbTipo.Items[ 0 ];
 
-                 invalid = invalid || this.mtbTelef.Text == "";
-*/
-                 if (this.mtbTelef.Text == "")
-                 {
+             pnlTipo.MaximumSize = new Size(int.MaxValue, tbTipo.Height * 2);
 
-                     string mensaje = "El teléfono no puede estar vacío";
-                     MessageBox.Show(mensaje, "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+             pnlTipo.Controls.Add(this.tbTipo);
+             pnlTipo.Controls.Add(lblTipo);
 
-                     this.mtbTelef.Focus();
-                 }
-
-                 //btAccept.Enabled = !invalid;
-             };
-           
-             pnlTelef.MaximumSize = new Size(int.MaxValue, mtbTelef.Height * 2);
-
-             pnlTelef.Controls.Add(this.mtbTelef);
-             pnlTelef.Controls.Add(lblTelef);
-
-             return pnlTelef;
+             return pnlTipo;
          }
-         
-         Panel BuildEmail()
+         Panel BuildIssn()
          {
-
-             this.pnlEmail = new Panel()
+             this.pnlIssnP = new Panel()
              {
                  Dock = DockStyle.Fill,
-                 Location = new Point(Left, this.pnlTelef.Top + this.pnlTelef.Height + 10),
+                 Location = new Point(Left, this.pnlTipo.Top + this.pnlTipo.Height + 10),
              };
 
-             var lblEmail = new Label()
+             var lblIssn = new Label()
              {
-                 Location = new Point(Left, this.pnlTelef.Top + this.pnlTelef.Height + 10),
-                 Text = "Email:",
+                 Location = new Point(Left, this.pnlTipo.Top + this.pnlTipo.Height + 10),
+                 Text = "ISSN:",
+                 Dock = DockStyle.Left,
+                 ForeColor = Color.White,
+                 Width = 150,
+                 TextAlign = ContentAlignment.TopRight,
+             };
+
+             this.tbIssn = new TextBox()
+             {
+                 Left = 0,
+                 Width = 250,
+                 Anchor = AnchorStyles.Bottom,
+             };
+
+             this.tbIssn.Validating += (sender, cancelArgs) =>
+             {
+                 var btAccept = (Button)this.AcceptButton;
+                 bool invalid = string.IsNullOrEmpty(this.IssnP);
+
+                 invalid = invalid || this.tbIssn.Text == "";
+
+                 if (invalid || this.tbIssn.Text == "")
+                 {
+
+                     string mensaje = "El Issn no puede estar vacía";
+                     MessageBox.Show(mensaje, "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                     this.tbIssn.Focus();
+                 }
+
+                 btAccept.Enabled = !invalid;
+             };
+
+             pnlIssnP.MaximumSize = new Size(int.MaxValue, tbIssn.Height * 2);
+
+             pnlIssnP.Controls.Add(this.tbIssn);
+             pnlIssnP.Controls.Add(lblIssn);
+
+             return pnlIssnP;
+         }
+         
+         Panel BuildTituloP()
+         {
+             this.pnlTituloP = new Panel()
+             {
+                 Dock = DockStyle.Fill,
+                 Location = new Point(Left, this.pnlIssnP.Top + this.pnlIssnP.Height + 10),
+             };
+
+             var lblTituloP = new Label()
+             {
+                 Location = new Point(Left, this.pnlIssnP.Top + this.pnlIssnP.Height + 10),
+                 Text = "Titulo:",
+                 Dock = DockStyle.Left,
+                 ForeColor = Color.White,
+                 Width = 150,
+                 TextAlign = ContentAlignment.TopRight,
+             };
+
+             this.tbTituloP = new TextBox()
+             {
+                 Left = 0,
+                 Width = 250,
+                 Anchor = AnchorStyles.Bottom,
+             };
+
+             this.tbTituloP.Validating += (sender, cancelArgs) =>
+             {
+                 var btAccept = (Button)this.AcceptButton;
+                 bool invalid = string.IsNullOrEmpty(this.TituloP);
+
+                 invalid = invalid || this.tbTituloP.Text == "";
+
+                 if (invalid || this.tbTituloP.Text == "")
+                 {
+
+                     string mensaje = "El título no puede estar vacío";
+                     MessageBox.Show(mensaje, "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                     this.tbTituloP.Focus();
+                 }
+
+                 btAccept.Enabled = !invalid;
+             };
+
+             pnlTituloP.MaximumSize = new Size(int.MaxValue, tbTituloP.Height * 2);
+
+             pnlTituloP.Controls.Add(this.tbTituloP);
+             pnlTituloP.Controls.Add(lblTituloP);
+
+             return pnlTituloP;
+         }
+         
+        
+         
+         Panel BuildEditorialP()
+         {
+
+             this.pnlEditorialP = new Panel()
+             {
+                 Dock = DockStyle.Fill,
+                 Location = new Point(Left, this.pnlTituloP.Top + this.pnlTituloP.Height + 10),
+             };
+
+             var lblEditorialP = new Label()
+             {
+                 Location = new Point(Left, this.pnlTituloP.Top + this.pnlTituloP.Height + 10),
+                 Text = "Editorial:",
                  Dock = DockStyle.Left,
                  ForeColor = Color.White,
                  Width = 150,
@@ -351,100 +337,99 @@ namespace proyectoIndividual.Ui.Dlg
              };
 
 
-             this.tbEmail = new TextBox()
+             this.tbEditorialP = new TextBox()
              {
                  Left = 0,
                  Width = 250,
                  Anchor = AnchorStyles.Bottom,
              };
 
-             this.tbEmail.Validating += (sender, cancelArgs) =>
+             this.tbEditorialP.Validating += (sender, cancelArgs) =>
              {
                  var btAccept = (Button)this.AcceptButton;
-                 bool invalid = string.IsNullOrEmpty(this.Email);
+                 bool invalid = string.IsNullOrEmpty(this.EditorialP);
 
-                 invalid = invalid || this.tbEmail.Text == "";
+                 invalid = invalid || this.tbEditorialP.Text == "";
 
-                 if (invalid || this.tbEmail.Text == "")
+                 if (invalid || this.tbEditorialP.Text == "")
                  {
 
-                     string mensaje = "El email no puede estar vacío";
+                     string mensaje = "La editorial no puede estar vacío";
                      MessageBox.Show(mensaje, "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                     this.tbEmail.Focus();
+                     this.tbEditorialP.Focus();
                  }
 
                  btAccept.Enabled = !invalid;
              };
 
-             pnlEmail.MaximumSize = new Size(int.MaxValue, tbEmail.Height * 2);
+             pnlEditorialP.MaximumSize = new Size(int.MaxValue, tbEditorialP.Height * 2);
 
-             pnlEmail.Controls.Add(this.tbEmail);
-             pnlEmail.Controls.Add(lblEmail);
+             pnlEditorialP.Controls.Add(this.tbEditorialP);
+             pnlEditorialP.Controls.Add(lblEditorialP);
 
-             return pnlEmail;
+             return pnlEditorialP;
          }
          
-         Panel BuildDirPostal()
+         Panel BuildRegEditorialP()
          {
-             this.pnlDirPostal = new Panel()
+             this.pnlRegEditorialP = new Panel()
              {
                  Dock = DockStyle.Fill,
-                 Location = new Point(Left, this.pnlEmail.Top + this.pnlEmail.Height + 10),
+                 Location = new Point(Left, this.pnlEditorialP.Top + this.pnlEditorialP.Height + 10),
              };
 
-             var lblDirPostal = new Label()
+             var lblRegEditorialP = new Label()
              {
-                 Location = new Point(Left, this.pnlEmail.Top + this.pnlEmail.Height + 10),
-                 Text = "Dirección Postal:",
+                 Location = new Point(Left, this.pnlEditorialP.Top + this.pnlEditorialP.Height + 10),
+                 Text = "Registro Editorial:",
                  Dock = DockStyle.Left,
                  ForeColor = Color.White,
                  Width = 150,
                  TextAlign = ContentAlignment.TopRight,
              };
 
-             this.tbDirPostal = new TextBox()
+             this.tbRegEditorialP= new TextBox()
              {
                  Left = 0,
                  Width = 250,
                  Anchor = AnchorStyles.Bottom,
              };
 
-             this.tbDirPostal.Validating += (sender, cancelArgs) =>
+             this.tbRegEditorialP.Validating += (sender, cancelArgs) =>
              {
                  var btAccept = (Button)this.AcceptButton;
-                 bool invalid = string.IsNullOrEmpty(this.DirPostal);
+                 bool invalid = string.IsNullOrEmpty(this.RegEditorialP);
 
-                 invalid = invalid || this.tbDirPostal.Text == "";
+                 invalid = invalid || this.tbRegEditorialP.Text == "";
 
-                 if (invalid || this.tbDirPostal.Text == "")
+                 if (invalid || this.tbRegEditorialP.Text == "")
                  {
 
-                     string mensaje = "La dirección postal no puede estar vacía";
+                     string mensaje = "El registro de editorial no puede estar vacío";
                      MessageBox.Show(mensaje, "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                     this.tbDirPostal.Focus();
+                     this.tbRegEditorialP.Focus();
                  }
 
                  btAccept.Enabled = !invalid;
              };
 
-             pnlDirPostal.MaximumSize = new Size(int.MaxValue, tbDirPostal.Height * 2);
+             pnlRegEditorialP.MaximumSize = new Size(int.MaxValue, tbRegEditorialP.Height * 2);
 
-             pnlDirPostal.Controls.Add(this.tbDirPostal);
-             pnlDirPostal.Controls.Add(lblDirPostal);
+             pnlRegEditorialP.Controls.Add(this.tbRegEditorialP);
+             pnlRegEditorialP.Controls.Add(lblRegEditorialP);
 
-             return pnlDirPostal;
+             return pnlRegEditorialP;
          }
-
+         
          
          
          
          public void Salir()
          {
              Console.WriteLine("Guardar y Salir");
-             this.Miembros.GuardarXml();
-         
+             this.Publicaciones.GuardarXml();
              Application.Exit();
          }
          
@@ -455,41 +440,43 @@ namespace proyectoIndividual.Ui.Dlg
         
          
          
-        private ComboBox cbDniMiembroList;
-        
-        private TextBox tbDNI;
-        private Panel pnlMiembro;
-        private Panel pnlDNI;
-        private Panel pnlNombre;
-        private Panel pnlEmail;
-        private Panel pnlTelef;
-        private Panel pnlDirPostal;
+    
+        private Panel pnlPublicacion;
+        private ComboBox tbTipo;
+        private Panel pnlTipo;
+        private Panel pnlIssnP;
+        private Panel pnlTituloP;
+        private Panel pnlEditorialP;
+        private Panel pnlRegEditorialP;
         private Panel pnlInserta;
-        private Button btnAddMiembro;
         
-        public string DNI => this.tbDNI.Text;
-        public string Nombre => this.tbNombre.Text;
-
-        public long Telefono => Convert.ToInt64(this.mtbTelef.Text);
-        public string Email => this.tbEmail.Text;
-
-        public string DirPostal => this.tbDirPostal.Text;
+        private Button btnAddPublicacion;
+        
+        
+        
+        public string Tipo => this.tbTipo.Text;
+        public string IssnP => this.tbIssn.Text;
+        public string TituloP => this.tbTituloP.Text;
+        public string EditorialP => this.tbEditorialP.Text;
+        public string RegEditorialP => this.tbRegEditorialP.Text;
+   
 
         
-        public StatusBar SbStatus;
+        
         private MainMenu mPpal;
         public MenuItem mArchivo;
         public MenuItem opVolver;
         public MenuItem opSalir;
         public MenuItem mBuscar;
         
-        private TextBox tbNombre;
-        private TextBox tbEmail;
-        private TextBox tbDirPostal;
-
-        private MaskedTextBox mtbTelef;
         
-        private GestionMiembros Miembros;
+        private TextBox tbIssnP;
+        private TextBox tbTituloP;
+        private TextBox tbEditorialP;
+        private TextBox tbRegEditorialP;
+        private TextBox tbIssn;
+        
+        private GestionPublicacion Publicaciones;
 
     }
 }

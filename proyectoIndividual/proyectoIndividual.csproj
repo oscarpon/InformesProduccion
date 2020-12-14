@@ -9,8 +9,9 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>proyectoIndividual</RootNamespace>
     <AssemblyName>proyectoIndividual</AssemblyName>
-    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -64,16 +65,47 @@
   <ItemGroup>
     <Compile Include="Core\GestionMeritoCientifico.cs" />
     <Compile Include="Core\GestionMiembros.cs" />
+    <Compile Include="Core\GestionPublicacion.cs" />
     <Compile Include="Core\MeritoCientifico.cs" />
     <Compile Include="Core\Miembro.cs" />
+    <Compile Include="Core\Publicacion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Ui\Dlg\DlgConsultaMerito.cs" />
-    <Compile Include="Ui\Dlg\DlgConsultaMiembro.cs" />
-    <Compile Include="Ui\Dlg\DlgInformeTodos.cs" />
-    <Compile Include="Ui\Dlg\DlgInsertaMerito.cs" />
-    <Compile Include="Ui\Dlg\DlgInsertaMiembro.cs" />
-    <Compile Include="Ui\Dlg\DlgModificaMerito.cs" />
-    <Compile Include="Ui\Dlg\DlgModificaMiembro.cs" />
+    <Compile Include="Ui\Dlg\DlgBuscarMerito.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ui\Dlg\DlgConsultaMerito.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ui\Dlg\DlgConsultaMiembro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ui\Dlg\DlgConsultaPublicacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ui\Dlg\DlgInformeTodos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ui\Dlg\DlgInsertaMerito.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ui\Dlg\DlgInsertaMiembro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ui\Dlg\DlgInsertaPublicacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ui\Dlg\DlgModificaMerito.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ui\Dlg\DlgModificaMiembro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ui\Dlg\DlgModificaPublicacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ui\Dlg\DlgMostrarBusquedaMeritos.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Ui\Dlg\GraficoAnual.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,11 +118,16 @@
     <Compile Include="Ui\Dlg\GraficoMensual.Designer.cs">
       <DependentUpon>GraficoMensual.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ui\MainWindowCore.cs" />
-    <Compile Include="Ui\MainWindowView.cs" />
+    <Compile Include="Ui\MainWindowCore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ui\MainWindowView.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Ui\Program.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>

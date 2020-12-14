@@ -78,11 +78,30 @@ namespace proyectoIndividual
             this.opInsertarMiembro = new WForms.MenuItem("&Insertar");
             this.opConsultaMiembro = new WForms.MenuItem("&Consulta");
             
+            
             this.mMiembro.MenuItems.Add(this.opInsertarMiembro);
             this.mMiembro.MenuItems.Add(this.opConsultaMiembro);
             
           
             this.mPpal.MenuItems.Add(this.mMiembro);
+            
+            
+            //
+            this.mPublicacion = new WForms.MenuItem("&Publicacion");
+            this.opInsertarPublicacion = new WForms.MenuItem("&Insertar");
+            this.opConsultarPublicacion = new WForms.MenuItem("&Consulta");
+            
+            
+            this.mPublicacion.MenuItems.Add(this.opInsertarPublicacion);
+            this.mPublicacion.MenuItems.Add(this.opConsultarPublicacion);
+            
+          
+            this.mPpal.MenuItems.Add(this.mPublicacion);
+            //
+            
+            
+            this.BuscarMerito = new WForms.MenuItem("&Buscar");
+            this.mPpal.MenuItems.Add(this.BuscarMerito);
             
 
             this.Menu = mPpal;
@@ -104,7 +123,11 @@ namespace proyectoIndividual
         public WForms.MenuItem opInsertarMerito;
         public WForms.MenuItem opSalir;
         public WForms.MenuItem mMiembro;
+        public WForms.MenuItem mPublicacion;
+        public WForms.MenuItem BuscarMerito;
         public WForms.MenuItem opInsertarMiembro;
+        public WForms.MenuItem opInsertarPublicacion;
+        public WForms.MenuItem opConsultarPublicacion;
         public WForms.MenuItem opConsultaMiembro;
         public WForms.MenuItem mInforme;
         public WForms.MenuItem opInfAnual;

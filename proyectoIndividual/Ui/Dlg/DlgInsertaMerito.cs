@@ -540,7 +540,7 @@ namespace proyectoIndividual.Ui.Dlg
          public void Salir()
          {
              Console.WriteLine("Guardar y Salir");
-
+             this.Meritos.GuardarXml();
              Application.Exit();
          }
          
