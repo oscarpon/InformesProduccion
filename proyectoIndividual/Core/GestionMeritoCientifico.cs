@@ -46,7 +46,7 @@ namespace proyectoIndividual.Core
 
         public MeritoCientifico getMeritoAño(int Año)
         {
-            TextWriter tw = new StreamWriter("SavedList.txt");
+            TextWriter tw = new StreamWriter($"Informe{Año}.txt");
             tw.Write("Informe del año:");
             tw.WriteLine(Año);
             foreach (MeritoCientifico merito in this.listaMeritoCientificos)
