@@ -55,7 +55,6 @@ namespace proyectoIndividual.Core
                 {
                     System.Console.WriteLine(merito);
                     tw.WriteLine(merito);
-                    getListAutores();
                 }
                 
             }

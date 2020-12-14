@@ -4,7 +4,19 @@
     <projectFile>proyectoIndividual/proyectoIndividual.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="daa05148-9ff2-424c-9ed8-6f8bdc976e83" name="Default Changelist" comment="" />
+    <list default="true" id="daa05148-9ff2-424c-9ed8-6f8bdc976e83" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.proyectoIndividual/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.proyectoIndividual/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.proyectoIndividual/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.proyectoIndividual/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proyectoIndividual/Core/GestionMeritoCientifico.cs" beforeDir="false" afterPath="$PROJECT_DIR$/proyectoIndividual/Core/GestionMeritoCientifico.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proyectoIndividual/bin/Debug/SavedList.txt" beforeDir="false" afterPath="$PROJECT_DIR$/proyectoIndividual/bin/Debug/SavedList.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proyectoIndividual/bin/Debug/proyectoIndividual.exe" beforeDir="false" afterPath="$PROJECT_DIR$/proyectoIndividual/bin/Debug/proyectoIndividual.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proyectoIndividual/bin/Debug/proyectoIndividual.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/proyectoIndividual/bin/Debug/proyectoIndividual.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proyectoIndividual/obj/Debug/proyectoIndividual.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/proyectoIndividual/obj/Debug/proyectoIndividual.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proyectoIndividual/obj/Debug/proyectoIndividual.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/proyectoIndividual/obj/Debug/proyectoIndividual.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proyectoIndividual/obj/Debug/proyectoIndividual.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/proyectoIndividual/obj/Debug/proyectoIndividual.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proyectoIndividual/obj/Debug/proyectoIndividual.exe" beforeDir="false" afterPath="$PROJECT_DIR$/proyectoIndividual/obj/Debug/proyectoIndividual.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proyectoIndividual/obj/Debug/proyectoIndividual.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/proyectoIndividual/obj/Debug/proyectoIndividual.pdb" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -12,6 +24,9 @@
   </component>
   <component name="ExportToHTMLSettings">
     <option name="OUTPUT_DIRECTORY" value="$PROJECT_DIR$/../proyectoIndividual\exportToHTML" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -46,6 +61,7 @@
     </option>
   </component>
   <component name="ProjectId" id="1kbE9OPGvk87om9Ta9mBvRkJBcj" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -96,6 +112,8 @@
       <workItem from="1607886212420" duration="62000" />
       <workItem from="1607886323989" duration="2850000" />
       <workItem from="1607936420338" duration="6156000" />
+      <workItem from="1607944367230" duration="142000" />
+      <workItem from="1607944582776" duration="294000" />
     </task>
     <servers />
   </component>
@@ -108,30 +126,30 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1877" height="254" key="GridCell.Tab.0.bottom" timestamp="1607943939841">
+    <state width="1877" height="254" key="GridCell.Tab.0.bottom" timestamp="1607944511928">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1557" height="221" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1607520878783" />
     <state width="1877" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1366.76.1366.728@0.0.1920.1040" timestamp="1607641551480" />
-    <state width="1877" height="254" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1607943939841" />
-    <state width="1877" height="254" key="GridCell.Tab.0.center" timestamp="1607943939840">
+    <state width="1877" height="254" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1607944511928" />
+    <state width="1877" height="254" key="GridCell.Tab.0.center" timestamp="1607944511928">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1557" height="221" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1607520878783" />
     <state width="1877" height="281" key="GridCell.Tab.0.center/0.0.1920.1040/-1366.76.1366.728@0.0.1920.1040" timestamp="1607641551479" />
-    <state width="1877" height="254" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1607943939840" />
-    <state width="1877" height="254" key="GridCell.Tab.0.left" timestamp="1607943939840">
+    <state width="1877" height="254" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1607944511928" />
+    <state width="1877" height="254" key="GridCell.Tab.0.left" timestamp="1607944511927">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1557" height="221" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1607520878783" />
     <state width="1877" height="281" key="GridCell.Tab.0.left/0.0.1920.1040/-1366.76.1366.728@0.0.1920.1040" timestamp="1607641551479" />
-    <state width="1877" height="254" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1607943939840" />
-    <state width="1877" height="254" key="GridCell.Tab.0.right" timestamp="1607943939840">
+    <state width="1877" height="254" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1607944511927" />
+    <state width="1877" height="254" key="GridCell.Tab.0.right" timestamp="1607944511928">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1557" height="221" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1607520878783" />
     <state width="1877" height="281" key="GridCell.Tab.0.right/0.0.1920.1040/-1366.76.1366.728@0.0.1920.1040" timestamp="1607641551480" />
-    <state width="1877" height="254" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1607943939840" />
+    <state width="1877" height="254" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1607944511928" />
     <state x="612" y="131" key="RiderGenerateDialog" timestamp="1607522073011">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
