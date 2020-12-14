@@ -162,7 +162,7 @@ namespace proyectoIndividual
        void InformeMensual()
         {
             Console.WriteLine("Informe Mensual");
-            var dlgInformeMensual = new GraficoMensual();
+            var dlgInformeMensual = new GraficoMensual(this.Meritos);
 
 
             this.View.Hide();

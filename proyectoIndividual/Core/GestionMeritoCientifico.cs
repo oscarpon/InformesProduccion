@@ -96,6 +96,39 @@ namespace proyectoIndividual.Core
 
             return count;
         }
+        
+        public List<string> getListAños()
+        {
+            List<string> años = new List<string>();
+            foreach (MeritoCientifico merito in this.listaMeritoCientificos)
+            {
+                años.Add(merito.Año.ToString());
+                System.Console.WriteLine(merito.Autor);
+            }
+            
+
+            return años;
+        }
+        
+        public int[] getNumeroVecesAño()
+        {
+            string[] años = getListAños().ToArray();
+            int[] count = new int[años.Length];
+
+            for (int i = 0; i < años.Length; i++)
+            {
+                for (int j = 0; j < años.Length; j++)
+                {
+                    if (String.Compare(años[i], años[j], StringComparison.Ordinal) == 0)
+                    {
+                        count[i]++;
+                    }
+                    
+                }
+            }
+
+            return count;
+        }
 
         public void VaciarLista()
         {

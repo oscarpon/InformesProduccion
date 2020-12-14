@@ -1,3 +1,3 @@
 Informe del año:2020
-(MeritoCientifico) Tipo: Libro, DOI: 1, ISSN: 8989, Año de publicacion: 2020,  pagina de inicio: 29, pagina de final 30, autor: Oscar
+(MeritoCientifico) Tipo: Libro, DOI: 1, ISSN: 8585, Año de publicacion: 2020,  pagina de inicio: 56, pagina de final 60, autor: Oscar
 

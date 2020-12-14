@@ -63,6 +63,7 @@ namespace proyectoIndividual.Ui.Dlg
             this.Controls.Add(this.chart1);
             this.Name = "GraficoMensual";
             this.Text = "GraficoMensual";
+            this.Load += new System.EventHandler(this.GraficoMensual_Load);
             ((System.ComponentModel.ISupportInitialize) (this.chart1)).EndInit();
             this.ResumeLayout(false);
         }
